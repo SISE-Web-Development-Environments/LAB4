@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>preventing...</title>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+   $("a").click(function(event){     
+     event.preventDefault();
+    $("body").append('<br/> As you can see, the link no longer linking you to google.com -> default ' + event.type + ' was  prevented');
+   });
+ });
+ </script>
+</head>
+
+<body>
+<a href="http://www.google.co.il">link to google</a>
+
+</body>
+
+</html>

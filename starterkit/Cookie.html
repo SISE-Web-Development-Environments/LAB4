@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<!-- saved from url=(0055)http://www.ise.bgu.ac.il/courses/internet/square16.html -->
+<HTML>
+<HEAD>
+<SCRIPT type="text/javascript">  
+function setCookie(cname, exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  var expires = "expires="+ d.toUTCString();
+  document.cookie = cname  + ";" + expires ;
+}
+function saveName() 
+   {
+		var txtbox1=document.getElementById("txtbox1");
+		setCookie(txtbox1.value,1);
+   }   
+
+function showName() 
+   {
+		p1.innerText=document.cookie;
+   } 
+</SCRIPT>
+</HEAD>
+<BODY>
+<input type=button onclick="saveName()" value="Click Me">
+<input type="text" id="txtbox1"/>
+<br><br>
+
+<input type=button onclick="showName()" value="Click Me">
+
+<p id="p1"></p>
+</BODY>
+</HTML>
